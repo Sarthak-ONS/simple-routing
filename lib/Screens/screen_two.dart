@@ -18,13 +18,13 @@ class Screen2 extends StatelessWidget {
         children: [
           MyCustomButton(
             onTapFunction: () {
-              print("Navigate to Screen 1");
+              Navigator.pushNamed(context, '/');
             },
             title: "Screen 1",
           ),
           MyCustomButton(
             onTapFunction: () {
-              print("Navigate to Screen 3");
+              Navigator.pushNamed(context, '/third');
             },
             title: "Screen 3",
           ),

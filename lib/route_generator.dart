@@ -8,11 +8,11 @@ class RouteGenerator {
   Route<dynamic> generateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
       case '/':
-        return MaterialPageRoute(builder: (_) => const Screen1());
+        return getMaterialPageRoute(const Screen1());
       case '/second':
-        return MaterialPageRoute(builder: (_) => const Screen2());
+        return getMaterialPageRoute(const Screen2());
       case '/third':
-        return MaterialPageRoute(builder: (_) => const Screen3());
+        return getMaterialPageRoute(const Screen3());
       default:
         return _errorRoute();
     }
@@ -29,5 +29,9 @@ class RouteGenerator {
         ),
       ),
     );
+  }
+
+  MaterialPageRoute getMaterialPageRoute(Widget widget) {
+    return MaterialPageRoute(builder: (_) => widget);
   }
 }
